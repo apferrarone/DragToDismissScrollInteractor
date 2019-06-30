@@ -7,21 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		681FD0EC1F99FD2700A17842 /* ModalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681FD0EB1F99FD2700A17842 /* ModalPresenter.swift */; };
 		682185841F980FEF009B063F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682185831F980FEF009B063F /* AppDelegate.swift */; };
-		682185861F980FEF009B063F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682185851F980FEF009B063F /* ViewController.swift */; };
+		682185861F980FEF009B063F /* IntroTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682185851F980FEF009B063F /* IntroTableViewController.swift */; };
 		682185891F980FEF009B063F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 682185871F980FEF009B063F /* Main.storyboard */; };
 		6821858B1F980FEF009B063F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6821858A1F980FEF009B063F /* Assets.xcassets */; };
 		6821858E1F980FEF009B063F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6821858C1F980FEF009B063F /* LaunchScreen.storyboard */; };
+		682185961F981113009B063F /* ModalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682185951F981113009B063F /* ModalController.swift */; };
+		682185991F981BC1009B063F /* DragToDismissScrollInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682185981F981BC1009B063F /* DragToDismissScrollInteractor.swift */; };
+		6821859C1F98A6BF009B063F /* UIColor+Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6821859B1F98A6BF009B063F /* UIColor+Help.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		681FD0EB1F99FD2700A17842 /* ModalPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalPresenter.swift; sourceTree = "<group>"; };
 		682185801F980FEF009B063F /* InteractiveModalDismissScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InteractiveModalDismissScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		682185831F980FEF009B063F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		682185851F980FEF009B063F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		682185851F980FEF009B063F /* IntroTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroTableViewController.swift; sourceTree = "<group>"; };
 		682185881F980FEF009B063F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6821858A1F980FEF009B063F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6821858D1F980FEF009B063F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6821858F1F980FEF009B063F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		682185951F981113009B063F /* ModalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalController.swift; sourceTree = "<group>"; };
+		682185981F981BC1009B063F /* DragToDismissScrollInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragToDismissScrollInteractor.swift; sourceTree = "<group>"; };
+		6821859B1F98A6BF009B063F /* UIColor+Help.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Help.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +63,11 @@
 			isa = PBXGroup;
 			children = (
 				682185831F980FEF009B063F /* AppDelegate.swift */,
-				682185851F980FEF009B063F /* ViewController.swift */,
+				682185851F980FEF009B063F /* IntroTableViewController.swift */,
+				681FD0EB1F99FD2700A17842 /* ModalPresenter.swift */,
+				682185951F981113009B063F /* ModalController.swift */,
+				682185981F981BC1009B063F /* DragToDismissScrollInteractor.swift */,
+				6821859B1F98A6BF009B063F /* UIColor+Help.swift */,
 				682185871F980FEF009B063F /* Main.storyboard */,
 				6821858A1F980FEF009B063F /* Assets.xcassets */,
 				6821858C1F980FEF009B063F /* LaunchScreen.storyboard */,
@@ -136,8 +148,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				682185861F980FEF009B063F /* ViewController.swift in Sources */,
+				681FD0EC1F99FD2700A17842 /* ModalPresenter.swift in Sources */,
+				6821859C1F98A6BF009B063F /* UIColor+Help.swift in Sources */,
+				682185861F980FEF009B063F /* IntroTableViewController.swift in Sources */,
+				682185961F981113009B063F /* ModalController.swift in Sources */,
 				682185841F980FEF009B063F /* AppDelegate.swift in Sources */,
+				682185991F981BC1009B063F /* DragToDismissScrollInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
