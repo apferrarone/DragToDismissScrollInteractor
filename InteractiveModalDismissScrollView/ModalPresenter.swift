@@ -48,12 +48,13 @@ class ModalPresenter: UIViewController
         let navCon = UINavigationController(rootViewController: tableViewController)
         navCon.navigationBar.isTranslucent = false
         navCon.modalTransitionStyle = .coverVertical
-        navCon.modalPresentationStyle = .custom // necessary for interactive transition
+        navCon.modalPresentationStyle = .custom // necessary to keep modal style in our control
         
         // present us first (clear and un-animated):
         self.modalPresentationStyle = .overCurrentContext
         self.definesPresentationContext = true
         
+        // present ourself first
         presenter.present(self, animated: false) {
             self.startTransition(state: self.state, duration: ANIMATION_DURATION_DEFAULT)
             self.present(navCon, animated: true, completion: nil)
@@ -67,8 +68,8 @@ class ModalPresenter: UIViewController
         self.addBlurAnimator(state: state, duration: duration)
         self.blurAnimator?.startAnimation()
         
-        // pause animations immediately so we can scrub them interactively,
-        // otherwise if not interactive, let them continue to run:
+        // pause animations immediately so we can scrub them interactively (when dismissing),
+        // otherwise if not interactive (when presenting), let them continue to run:
         if isInteractive {
             self.blurAnimator?.pauseAnimation()
         }
@@ -92,7 +93,7 @@ class ModalPresenter: UIViewController
         self.blurAnimator = UIViewPropertyAnimator(duration: duration, timingParameters: timing)
         
         if #available(iOS 11.0, *) {
-            self.blurAnimator?.scrubsLinearly = false
+            self.blurAnimator?.scrubsLinearly = false // use our own timing curve instead
         }
         
         self.blurAnimator?.addAnimations {

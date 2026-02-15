@@ -10,7 +10,7 @@ import UIKit
 
 private let ANIMATION_DURATION_DISMISS: TimeInterval = 0.5
 private let THRESHOLD_FINISH: CGFloat = 0.25
-private let GRAVITY_DIRECTION = CGVector(dx: 0, dy: 4.0) //a little faster
+private let GRAVITY_DIRECTION = CGVector(dx: 0, dy: 4.0) // a little faster
 private let SNAP_DAMPING: CGFloat = 0.3
 private let VELOCITY_VERTICAL_SLOW: CGFloat = 1000.0
 
