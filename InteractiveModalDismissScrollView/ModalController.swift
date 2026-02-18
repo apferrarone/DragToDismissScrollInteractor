@@ -38,7 +38,7 @@ final class ModalController: UITableViewController
     
     override func viewWillAppear(_ animated: Bool)
     {
-        super.viewDidAppear(animated)
+        super.viewWillAppear(animated)
         
         if let navCon = self.navigationController, self.dragToDismiss == nil {
             self.dragToDismiss = DragToDismissScrollInteractor(sourceController: navCon, scrollView: self.tableView)
@@ -87,11 +87,15 @@ extension ModalController: UIViewControllerTransitioningDelegate
 {
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning?
     {
-        return self.dragToDismiss?.hasStartedInteraction ?? false ? self.dragToDismiss : nil
+        return self.dragToDismiss?.hasStartedInteraction ?? false
+            ? self.dragToDismiss
+            : nil
     }
     
     func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning?
     {
-        return self.dragToDismiss?.hasStartedInteraction ?? false ? self.dragToDismiss : nil
+        return self.dragToDismiss?.hasStartedInteraction ?? false
+            ? self.dragToDismiss
+            : nil
     }
 }
